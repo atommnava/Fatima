@@ -12,20 +12,18 @@ function fetchBooks() {
 }
 
 function displayBooks(books) {
-    const catalog = document.getElementById("book-catalog");
-    catalog.innerHTML = "";
+        const catalog = document.getElementById("book-catalog");
+        catalog.innerHTML = "";
 
-    books.forEach(book => {
+        books.forEach(book => {
         const bookElement = document.createElement("div");
         bookElement.classList.add("book-card");
 
         bookElement.innerHTML = `
             <img src="${book.cover_image}" alt="${book.title}" class="book-cover">
-            <h3>${book.title}</h3>
+            <h5>${book.title}</h5>
             <p><strong>Autor:</strong> ${book.author}</p>
-            <p><strong>Género:</strong> ${book.genre}</p>
-            <p><strong>Precio:</strong> $${book.price}</p>
-            <button class="buy-button">Comprar</button>
+            <p>Precio:${book.price}</p>
         `;
 
         catalog.appendChild(bookElement);
