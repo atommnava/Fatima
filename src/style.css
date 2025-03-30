@@ -78,6 +78,13 @@
     gap: 3px; /* Reduce la separación entre los elementos */
 }
 
+.book-price {
+    font-size: 15px; /* Aumenta el tamaño del precio */
+    font-weight: bold; /* Hace que el precio resalte más */
+    color: #ffffff; /* Ajusta el color si es necesario */
+    margin-top: 5px; /* Agrega un pequeño margen superior */
+}
+
 .book-cover {
     width: 100%; /* Mantiene el ancho completo del contenedor */
     height: 150px; /* Aumenta la altura para que sea más rectangular */
