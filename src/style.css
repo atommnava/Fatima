@@ -62,6 +62,7 @@
 
 
 .book-card {
+    font-size: 15px;
     width: 100px;
     height: 230px;
     padding: 15px;
@@ -76,14 +77,5 @@
 .book-cover {
     width: 100%;
     height: auto;
-    border-radius: 5px;
-}
-
-.buy-button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
     border-radius: 5px;
 }
