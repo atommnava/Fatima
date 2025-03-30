@@ -22,8 +22,8 @@ function displayBooks(books) {
         bookElement.innerHTML = `
             <img src="${book.cover_image}" alt="${book.title}" class="book-cover">
             <h5>${book.title}</h5>
-            <p><strong>Autor:</strong> ${book.author}</p>
-            <p>Precio:${book.price}</p>
+            <h5>${book.author}</h5>
+            <p>$${book.price}</p>
         `;
 
         catalog.appendChild(bookElement);
