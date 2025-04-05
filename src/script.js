@@ -2,31 +2,38 @@ document.addEventListener("DOMContentLoaded", () => {
     fetchBooks();
 });
 
-function fetchBooks() {
-    fetch("http://localhost:3000/api/books")
-        .then(response => response.json())
-        .then(books => {
-            displayBooks(books);
-        })
-        .catch(error => console.error("Error al obtener los libros:", error));
+async function fetchBooks() {
+    try {
+        const response = await fetch("./get_books.php")  // Ruta relativa
+        
+        if (!response.ok) {
+            throw new Error(`Error HTTP: ${response.status}`);
+        }
+
+        const books = await response.json();
+        displayBooks(books);
+    } catch (error) {
+        console.error("Error al cargar libros:", error);
+        document.getElementById("book-catalog").innerHTML = `
+            <p class="error">No se pudieron cargar los libros. Recarga la página.</p>
+        `;
+    }
 }
 
 function displayBooks(books) {
-        const catalog = document.getElementById("book-catalog");
-        catalog.innerHTML = "";
+    const catalog = document.getElementById("book-catalog");
+    
+    if (!books || books.length === 0) {
+        catalog.innerHTML = "<p class='error'>No se encontraron libros.</p>";
+        return;
+    }
 
-        books.forEach(book => {
-        const bookElement = document.createElement("div");
-        bookElement.classList.add("book-card");
-
-        bookElement.innerHTML = `
-        <img src="${book.cover_image}" alt="${book.title}" class="book-cover">
-        <h5>${book.title}</h5>
-        <p>${book.author}</p>
-        <h4 class="book-price">$${book.price}</h4> <!-- Añadir la clase -->
-        `;
-
-
-            catalog.appendChild(bookElement);
-    });
+    catalog.innerHTML = books.map(book => `
+        <div class="book-card">
+            <img src="${book.cover_image}" alt="${book.title}" class="book-cover">
+            <h5>${book.title}</h5>
+            <p>${book.author}</p>
+            <h4 class="book-price">$${book.price.toFixed(2)}</h4>
+        </div>
+    `).join('');
 }

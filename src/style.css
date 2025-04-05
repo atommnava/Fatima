@@ -40,42 +40,23 @@
     height: 80px;
 }
 
+/* Modifica estas reglas en tu style.css */
+
 .background {
-    width: 1450px;
-    height: 920px;
-    margin: -10px 0px 0px -20px;
-    position: relative; /* Agregado para posicionar libros encima */
-    z-index: 1; /* Coloca la imagen al fondo */
+    z-index: 1; /* Mantén esto */
+    position: relative; /* Añade esto si no está */
 }
 
-/* Conectar el Front end con la base de datos */
 .catalog-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    position: absolute; /* Coloca los libros encima del fondo */
-    top: 550px; /* Ajusta según el diseño */
-    left: 50px; /* Ajusta según el diseño */
-    z-index: 2; /* Coloca los libros encima del fondo */
+    position: relative; /* Cambia de absolute a relative */
+    top: auto; /* Elimina posicionamiento fijo */
+    left: auto;
+    margin-top: -300px; /* Ajusta según necesites */
+    z-index: 10; /* Mayor que el fondo */
 }
-
 
 .book-card {
-    font-size: 30px; /* Reduce el tamaño del texto */
-    width: 115px; /* Aumenta un poco el ancho para evitar desbordes */
-    height: 230px; /* Ajusta el alto para que el texto no salga */
-    padding: 10px; /* Reduce el padding interno */
-    border-radius: 10px;
-    background-color: rgba(158, 102, 67, 0.9); /* Color semitransparente */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    z-index: 3; /* Asegura que las tarjetas estén encima */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
-    gap: 3px; /* Reduce la separación entre los elementos */
+    z-index: 11; /* Mayor que el contenedor */
 }
 
 .book-price {
@@ -92,14 +73,7 @@
     border-radius: 5px;
 }
 
-.book-card h5 {
-    font-size: 12px; /* Reduce el tamaño del título */
-    margin: 2px 0; /* Reduce los márgenes */
-    line-height: 1.2; /* Reduce el interlineado */
-}
-
-.book-card p {
-    font-size: 10px; /* Reduce el tamaño del autor */
-    margin: 0; /* Elimina el margen */
-    line-height: 1.1; /* Reduce aún más el interlineado */
+.book-card {
+    z-index: 11; /* Mayor que el contenedor */
+    /*border: 2px solid red !important;*/ /* Para verificar si se renderiza */
 }
