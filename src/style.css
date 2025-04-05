@@ -40,40 +40,102 @@
     height: 80px;
 }
 
-/* Modifica estas reglas en tu style.css */
-
 .background {
-    z-index: 1; /* Mantén esto */
-    position: relative; /* Añade esto si no está */
+    width: 1450px;
+    height: 920px;
+    margin: -10px 0px 0px -20px;
+    position: relative; /* Agregado para posicionar libros encima */
+    z-index: 1; /* Coloca la imagen al fondo */
 }
 
+/* Conectar el Front end con la base de datos */
+/* Contenedor principal del catálogo */
 .catalog-container {
-    position: relative; /* Cambia de absolute a relative */
-    top: auto; /* Elimina posicionamiento fijo */
-    left: auto;
-    margin-top: -300px; /* Ajusta según necesites */
-    z-index: 10; /* Mayor que el fondo */
+    display: flex;
+    flex-direction: row; /* Organiza los libros en horizontal */
+    flex-wrap: nowrap; /* Evita que se envuelvan a otra línea */
+    overflow-x: auto; /* Permite scroll horizontal si hay muchos libros */
+    gap: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgba(238, 221, 194, 0.7); /* Fondo semitransparente que combina con el body */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    position: relative;
 }
 
+/* Tarjetas de libros */
 .book-card {
-    z-index: 11; /* Mayor que el contenedor */
+    width: 150px; /* Ancho fijo para uniformidad */
+    height: 280px; /* Altura suficiente para la imagen y texto */
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(158, 102, 67, 0.9); /* Color café semitransparente */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio uniformemente */
+    align-items: center;
+    transition: transform 0.3s ease; /* Efecto hover suave */
+    flex-shrink: 0; /* Evita que las tarjetas se encojan */
+}
+
+.book-card:hover {
+    transform: translateY(-5px); /* Efecto de levantar al pasar el mouse */
+}
+
+/* Imagen de portada */
+.book-cover {
+    width: 120px;
+    height: 160px;
+    object-fit: cover; /* Ajusta la imagen manteniendo proporciones */
+    border-radius: 5px;
+    border: 1px solid #EEDDC2; /* Borde que combina con el fondo */
+}
+
+/* Textos */
+.book-card h5 {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 1.2;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Puntos suspensivos si el título es largo */
+}
+
+.book-card p {
+    font-size: 12px;
+    margin: 0;
+    color: #F0E6D2;
+    line-height: 1.1;
 }
 
 .book-price {
-    font-size: 15px; /* Aumenta el tamaño del precio */
-    font-weight: bold; /* Hace que el precio resalte más */
-    color: #ffffff; /* Ajusta el color si es necesario */
-    margin-top: 5px; /* Agrega un pequeño margen superior */
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-top: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 3px 8px;
+    border-radius: 12px;
 }
 
-.book-cover {
-    width: 100%; /* Mantiene el ancho completo del contenedor */
-    height: 150px; /* Aumenta la altura para que sea más rectangular */
-    object-fit: contain; /* Evita recortes y muestra la imagen completa */
-    border-radius: 5px;
+/* Scrollbar personalizada para el contenedor horizontal */
+.catalog-container::-webkit-scrollbar {
+    height: 8px;
 }
 
-.book-card {
-    border: 2px solid red !important; /* Forzar visibilidad */
-    opacity: 1 !important;
+.catalog-container::-webkit-scrollbar-track {
+    background: #EEDDC2;
+    border-radius: 4px;
+}
+
+.catalog-container::-webkit-scrollbar-thumb {
+    background: #9E6643;
+    border-radius: 4px;
 }
