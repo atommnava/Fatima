@@ -74,6 +74,6 @@
 }
 
 .book-card {
-    z-index: 11; /* Mayor que el contenedor */
-    /*border: 2px solid red !important;*/ /* Para verificar si se renderiza */
+    border: 2px solid red !important; /* Forzar visibilidad */
+    opacity: 1 !important;
 }
