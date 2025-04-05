@@ -10,8 +10,8 @@ if ($conn->connect_error) {
 $result = $conn->query("SELECT * FROM books");
 $books = [];
 while ($row = $result->fetch_assoc()) {
-    $row["price"] = (float)$row["price"]; // Forzar conversión a número
-    echo json_encode($books, JSON_NUMERIC_CHECK); // Asegurar números en JSON
+    $row["price"] = (float)$row["price"];
+    $books[] = $row; // Agregar cada fila al array
 }
-echo json_encode($books);
+echo json_encode($books, JSON_NUMERIC_CHECK); // Enviar todo el array una vez
 ?>
