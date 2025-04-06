@@ -72,7 +72,7 @@
     height: 280px; /* Altura suficiente para la imagen y texto */
     padding: 10px;
     border-radius: 8px;
-    background-color: rgba(158, 102, 67, 0.9); /* Color café semitransparente */
+    background-color: brown;/*rgba(158, 102, 67, 0.9);*/ /* Color café semitransparente */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
     text-align: center;
     display: flex;
@@ -137,6 +137,6 @@
 }
 
 .catalog-container::-webkit-scrollbar-thumb {
-    background: #9E6643;
+    background: brown;/*#9E6643;*/
     border-radius: 4px;
 }

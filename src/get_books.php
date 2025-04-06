@@ -7,7 +7,7 @@ if ($conn->connect_error) {
     die(json_encode(["error" => "Conexión fallida: " . $conn->connect_error]));
 }
 
-$result = $conn->query("SELECT * FROM books");
+$result = $conn->query("SELECT * FROM books;");
 $books = [];
 while ($row = $result->fetch_assoc()) {
     $row["price"] = (float)$row["price"];
