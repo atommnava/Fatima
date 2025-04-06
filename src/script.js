@@ -5,11 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
 async function fetchBooks() {
     try {
         const response = await fetch("https://antares.dci.uia.mx/ict23amn/Fatima/src/get_books.php");
-        if (!response.ok) throw new Error(`Error HTTP: ${response.status}`);
-        
+        if (!response.ok) {
+            throw new Error(`Error HTTPS: ${response.status}`);
+        }
         const books = await response.json(); // Leer la respuesta solo una vez
         console.log("Datos recibidos:", books); 
         displayBooks(books);
+        
+        // Validar
     } catch (error) {
         console.error("Error al cargar libros:", error);
         document.getElementById("book-catalog").innerHTML = `
