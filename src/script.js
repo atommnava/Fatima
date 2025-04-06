@@ -11,7 +11,7 @@ async function fetchBooks() {
         const books = await response.json(); // Leer la respuesta solo una vez
         console.log("Datos recibidos:", books); 
         displayBooks(books);
-        
+
         // Validar
     } catch (error) {
         console.error("Error al cargar libros:", error);
