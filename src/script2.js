@@ -3,8 +3,8 @@
  * @brief It displays a specific form based on the form ID provided in the argument
  */
 
-function showForm(formID) 
+function showForm(formId) 
 {
-    document.querySelectorAll(".form-box").forEach(form -> form.classList.remove("active"));
-    document.getElementById(formID).classList.add("active");
+    document.querySelectorAll(".form-box").forEach(form => form.classList.remove("active"));
+    document.getElementById(formId).classList.add("active");
 }
