@@ -1,4 +1,5 @@
 <?php
+// Configuration for the database
 $host = "localhost";
 $user = "ict23amn";
 $password = "258927";
