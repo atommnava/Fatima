@@ -1,4 +1,3 @@
-
 /*
  * @author Atom Alexder M. Nava
  * @brief First we call the session start function, this function is used to start a PHP session,
@@ -7,6 +6,7 @@
  * We check whether the register button has been clicked using the isset function, this function wants to check whether a variable
  * has been set or not. 
  */
+
 <?php
 // Handling the registration process
 session_start();
@@ -29,7 +29,7 @@ if (isset($_POST['register'])) {
     } else {
         $conn -> query("INSERT INTO users(name, email, password, role) VALUES('$name', '$email', '$password', '$role')");
     }
-    header("Location: index2.php");
+    header("Location: index.php");
     exit();
 }
 
@@ -58,7 +58,7 @@ if (isset($_POST['login'])) {
     }
     $_SESSION['login_error'] = 'Incorrect email or password';
     $_SESSION['active_form'] = 'login';
-    header("Location: index2.php");
+    header("Location: index.php");
     exit();
 }
 ?>

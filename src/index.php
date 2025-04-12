@@ -1,11 +1,12 @@
 <?php
 session_start(); // To access the data stored
 
-$erros = [
+$errors = [
     'login' => $_SESSION['login_error'] ?? '',
     'register' => $_SESSION['register_error'] ?? ''
 ];
 // To determine which form is active [login, register]
+
 $activeForm = $_SESSION['active_form'] ?? 'login';
 
 // It removes all existing session variables, however the session itself
@@ -37,7 +38,7 @@ function isActiveForm($formName, $activeForm) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Full Stack Login & Register Form with User $ Admin page</title>
     <link rel="stylesheet" href="style2.css">
 </head>
 <body>
