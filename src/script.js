@@ -42,3 +42,4 @@ function displayBooks(books) {
         </div>`;
     }).join('');
 }
+
