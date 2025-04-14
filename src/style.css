@@ -1,276 +1,357 @@
 .gif {
-    margin-top: 0px;
-    margin-left: 0px;
-    width: 150px;
-    height: 80px;
+   margin-top: 0px;
+   margin-left: 0px;
+   width: 150px;
+   height: 80px;
 } 
 
 .gif2 {
-    margin-top: 0px;
-    margin-left: 10px;
-    width: 150px;
-    height: 80px;
+   margin-top: 0px;
+   margin-left: 10px;
+   width: 150px;
+   height: 80px;
 }
 
 .gif3 {
-    margin-top: 0px;
-    margin-left: 10px;
-    width: 150px;
-    height: 80px;
+   margin-top: 0px;
+   margin-left: 10px;
+   width: 150px;
+   height: 80px;
 }
 
 .gif4 {
-    margin-top: 0px;
-    margin-left: 10px;
-    width: 150px;
-    height: 80px;
+   margin-top: 0px;
+   margin-left: 10px;
+   width: 150px;
+   height: 80px;
 }
 
 .gif5 {
-    margin-top: 0px;
-    margin-left: 10px;
-    width: 150px;
-    height: 80px;
+   margin-top: 0px;
+   margin-left: 10px;
+   width: 150px;
+   height: 80px;
 }
 
 .gif6 {
-    margin-top: 0px;
-    margin-left: 10px;
-    width: 150px;
-    height: 80px;
+   margin-top: 0px;
+   margin-left: 10px;
+   width: 150px;
+   height: 80px;
 }
 
 .background {
-    width: 1450px;
-    height: 920px;
-    margin: -10px 0px 0px -20px;
-    position: relative; /* Agregado para posicionar libros encima */
-    z-index: 1; /* Coloca la imagen al fondo */
+   width: 1450px;
+   height: 920px;
+   margin: -10px 0px 0px -20px;
+   position: relative; /* Agregado para posicionar libros encima */
+   z-index: 1; /* Coloca la imagen al fondo */
 }
 
 /* Conectar el Front end con la base de datos */
 /* Contenedor principal del catálogo */
 .catalog-container {
-    display: flex;
-    flex-direction: row; /* Organiza los libros en horizontal */
-    flex-wrap: nowrap; /* Evita que se envuelvan a otra línea */
-    overflow-x: auto; /* Permite scroll horizontal si hay muchos libros */
-    gap: 15px;
-    padding: 20px;
-    margin-top: -430px;
-    background-color: rgba(238, 221, 194, 0.7); /* Fondo semitransparente que combina con el body */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   display: flex;
+   flex-direction: row; /* Organiza los libros en horizontal */
+   flex-wrap: nowrap; /* Evita que se envuelvan a otra línea */
+   overflow-x: auto; /* Permite scroll horizontal si hay muchos libros */
+   gap: 15px;
+   padding: 20px;
+   margin-top: -430px;
+   background-color: rgba(238, 221, 194, 0.7); /* Fondo semitransparente que combina con el body */
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-    position: absolute;
-    z-index: 10; /* z-index: 2;*/
+   position: absolute;
+   z-index: 10; /* z-index: 2;*/
 }
 
 /* Tarjetas de libros */
 .book-card {
-    width: 150px; /* Ancho fijo para uniformidad */
-    height: 280px; /* Altura suficiente para la imagen y texto */
-    padding: 10px;
-    border-radius: 8px;
-    background-color: brown;/*rgba(158, 102, 67, 0.9);*/ /* Color café semitransparente */
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Distribuye el espacio uniformemente */
-    align-items: center;
-    transition: transform 0.3s ease; /* Efecto hover suave */
-    flex-shrink: 0; /* Evita que las tarjetas se encojan */
+   width: 150px; /* Ancho fijo para uniformidad */
+   height: 280px; /* Altura suficiente para la imagen y texto */
+   padding: 10px;
+   border-radius: 8px;
+   background-color: brown;/*rgba(158, 102, 67, 0.9);*/ /* Color café semitransparente */
+   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between; /* Distribuye el espacio uniformemente */
+   align-items: center;
+   transition: transform 0.3s ease; /* Efecto hover suave */
+   flex-shrink: 0; /* Evita que las tarjetas se encojan */
 }
 
 .book-card:hover {
-    transform: translateY(-5px); /* Efecto de levantar al pasar el mouse */
+   transform: translateY(-5px); /* Efecto de levantar al pasar el mouse */
 }
 
 /* Imagen de portada */
 .book-cover {
-    width: 120px;
-    height: 160px;
-    object-fit: cover; /* Ajusta la imagen manteniendo proporciones */
-    border-radius: 5px;
-    border: 1px solid #EEDDC2; /* Borde que combina con el fondo */
+   width: 120px;
+   height: 160px;
+   object-fit: cover; /* Ajusta la imagen manteniendo proporciones */
+   border-radius: 5px;
+   border: 1px solid #EEDDC2; /* Borde que combina con el fondo */
 }
 
 /* Textos */
 .book-card h5 {
-    font-size: 14px;
-    margin: 5px 0;
-    color: #FFFFFF;
-    font-weight: bold;
-    line-height: 1.2;
-    max-width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; /* Puntos suspensivos si el título es largo */
+   font-size: 14px;
+   margin: 5px 0;
+   color: #FFFFFF;
+   font-weight: bold;
+   line-height: 1.2;
+   max-width: 100%;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis; /* Puntos suspensivos si el título es largo */
 }
 
 .book-card p {
-    font-size: 12px;
-    margin: 0;
-    color: #F0E6D2;
-    line-height: 1.1;
+   font-size: 12px;
+   margin: 0;
+   color: #F0E6D2;
+   line-height: 1.1;
 }
 
 .book-price {
-    font-size: 16px;
-    font-weight: bold;
-    color: #FFFFFF;
-    margin-top: 5px;
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 3px 8px;
-    border-radius: 12px;
+   font-size: 16px;
+   font-weight: bold;
+   color: #FFFFFF;
+   margin-top: 5px;
+   background-color: rgba(0, 0, 0, 0.2);
+   padding: 3px 8px;
+   border-radius: 12px;
 }
 
 /* Scrollbar personalizada para el contenedor horizontal */
 .catalog-container::-webkit-scrollbar {
-    height: 8px;
+   height: 8px;
 }
 
 .catalog-container::-webkit-scrollbar-track {
-    background: #EEDDC2;
-    border-radius: 4px;
+   background: #EEDDC2;
+   border-radius: 4px;
 }
 
 .catalog-container::-webkit-scrollbar-thumb {
-    background: brown;/*#9E6643;*/
-    border-radius: 4px;
+   background: brown;/*#9E6643;*/
+   border-radius: 4px;
 }
 
 /* Para el carrusel de fotos */
 #slider {
-    margin: 0 auto;
-    width: 800px;
-    max-width: 100%;
-    text-align: center;
- }
- #slider input[type=radio] {
-    display: none;
- }
- #slider label {
-    cursor:pointer;
-    text-decoration: none;
- }
- #slides {
-    padding: 10px;
-    border: 3px solid #ccc;
-    background: #fff;
-    position: relative;
-    z-index: 1;
- }
- #overflow {
-    width: 100%;
-    overflow: hidden;
- }
- #slide1:checked ~ #slides .inner {
-    margin-left: 0;
- }
- #slide2:checked ~ #slides .inner {
-    margin-left: -100%;
- }
- #slide3:checked ~ #slides .inner {
-    margin-left: -200%;
- }
- #slide4:checked ~ #slides .inner {
-    margin-left: -300%;
- }
- #slides .inner {
-    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-    width: 400%;
-    line-height: 0;
-    height: 300px;
- }
- #slides .slide {
-    width: 25%;
-    float:left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: #fff;
- }
- #slides .slide_1 {
-    background: #00171F;
- }
- #slides .slide_2 {
-    background: #003459;
- }
- #slides .slide_3 {
-    background: #007EA7;
- }
- #slides .slide_4 {
-    background: #00A8E8;
- }
- #controls {
-    margin: -180px 0 0 0;
-    width: 100%;
-    height: 50px;
-    z-index: 3;
-    position: relative;
- }
- #controls label {
-    transition: opacity 0.2s ease-out;
-    display: none;
-    width: 50px;
-    height: 50px;
-    opacity: .4;
- }
- #controls label:hover {
-    opacity: 1;
- }
- #slide1:checked ~ #controls label:nth-child(2),
- #slide2:checked ~ #controls label:nth-child(3),
- #slide3:checked ~ #controls label:nth-child(4),
- #slide4:checked ~ #controls label:nth-child(1) {
-    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
-    float:right;
-    margin: 0 -50px 0 0;
-    display: block;
- }
- #slide1:checked ~ #controls label:nth-last-child(2),
- #slide2:checked ~ #controls label:nth-last-child(3),
- #slide3:checked ~ #controls label:nth-last-child(4),
- #slide4:checked ~ #controls label:nth-last-child(1) {
-    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
-    float:left;
-    margin: 0 0 0 -50px;
-    display: block;
- }
- #bullets {
-    margin: 150px 0 0;
-    text-align: center;
- }
- #bullets label {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius:100%;
-    background: #ccc;
-    margin: 0 10px;
- }
- #slide1:checked ~ #bullets label:nth-child(1),
- #slide2:checked ~ #bullets label:nth-child(2),
- #slide3:checked ~ #bullets label:nth-child(3),
- #slide4:checked ~ #bullets label:nth-child(4) {
-    background: #444;
- }
- @media screen and (max-width: 900px) {
-    #slide1:checked ~ #controls label:nth-child(2),
-    #slide2:checked ~ #controls label:nth-child(3),
-    #slide3:checked ~ #controls label:nth-child(4),
-    #slide4:checked ~ #controls label:nth-child(1),
-    #slide1:checked ~ #controls label:nth-last-child(2),
-    #slide2:checked ~ #controls label:nth-last-child(3),
-    #slide3:checked ~ #controls label:nth-last-child(4),
-    #slide4:checked ~ #controls label:nth-last-child(1) {
-       margin: 0;
-    }
-    #slides {
-       max-width: calc(100% - 140px);
-       margin: 0 auto;
-    }
- }
+   margin: 0 auto;
+   width: 800px;
+   max-width: 100%;
+   text-align: center;
+}
+#slider input[type=radio] {
+   display: none;
+}
+#slider label {
+   cursor:pointer;
+   text-decoration: none;
+}
+#slides {
+   padding: 10px;
+   border: 3px solid #ccc;
+   background: #fff;
+   position: relative;
+   z-index: 1;
+}
+#overflow {
+   width: 100%;
+   overflow: hidden;
+}
+#slide1:checked ~ #slides .inner {
+   margin-left: 0;
+}
+#slide2:checked ~ #slides .inner {
+   margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner {
+   margin-left: -200%;
+}
+#slide4:checked ~ #slides .inner {
+   margin-left: -300%;
+}
+#slides .inner {
+   transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+   width: 400%;
+   line-height: 0;
+   height: 300px;
+}
+#slides .slide {
+   width: 25%;
+   float:left;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   color: #fff;
+}
+#slides .slide_1 {
+   background: #00171F;
+}
+#slides .slide_2 {
+   background: #003459;
+}
+#slides .slide_3 {
+   background: #007EA7;
+}
+#slides .slide_4 {
+   background: #00A8E8;
+}
+#controls {
+   margin: -180px 0 0 0;
+   width: 100%;
+   height: 50px;
+   z-index: 3;
+   position: relative;
+}
+#controls label {
+   transition: opacity 0.2s ease-out;
+   display: none;
+   width: 50px;
+   height: 50px;
+   opacity: .4;
+}
+#controls label:hover {
+   opacity: 1;
+}
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1) {
+   background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+   float:right;
+   margin: 0 -50px 0 0;
+   display: block;
+}
+#slide1:checked ~ #controls label:nth-last-child(2),
+#slide2:checked ~ #controls label:nth-last-child(3),
+#slide3:checked ~ #controls label:nth-last-child(4),
+#slide4:checked ~ #controls label:nth-last-child(1) {
+   background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+   float:left;
+   margin: 0 0 0 -50px;
+   display: block;
+}
+#bullets {
+   margin: 150px 0 0;
+   text-align: center;
+}
+#bullets label {
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   border-radius:100%;
+   background: #ccc;
+   margin: 0 10px;
+}
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+   background: #444;
+}
+@media screen and (max-width: 900px) {
+   #slide1:checked ~ #controls label:nth-child(2),
+   #slide2:checked ~ #controls label:nth-child(3),
+   #slide3:checked ~ #controls label:nth-child(4),
+   #slide4:checked ~ #controls label:nth-child(1),
+   #slide1:checked ~ #controls label:nth-last-child(2),
+   #slide2:checked ~ #controls label:nth-last-child(3),
+   #slide3:checked ~ #controls label:nth-last-child(4),
+   #slide4:checked ~ #controls label:nth-last-child(1) {
+      margin: 0;
+   }
+   #slides {
+      max-width: calc(100% - 140px);
+      margin: 0 auto;
+   }
+}
+
+/* Estilos para la página de detalle */
+.book-detail-container {
+   padding: 40px;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.book-detail-card {
+   display: flex;
+   gap: 40px;
+   background: white;
+   padding: 30px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.detail-cover {
+   width: 400px;
+   height: 550px;
+   object-fit: cover;
+   border-radius: 5px;
+   border: 3px solid brown;
+}
+
+.book-info {
+   flex: 1;
+}
+
+.book-info h1 {
+   color: brown;
+   margin-bottom: 20px;
+}
+
+.author {
+   font-size: 18px;
+   color: #666;
+   margin-bottom: 15px;
+}
+
+.description {
+   font-size: 16px;
+   line-height: 1.6;
+   color: #444;
+   margin-bottom: 25px;
+}
+
+.price {
+   font-size: 24px;
+   color: brown;
+   font-weight: bold;
+   margin-bottom: 30px;
+}
+
+.action-buttons {
+   display: flex;
+   gap: 20px;
+}
+
+.buy-button, .cart-button {
+   padding: 15px 30px;
+   border: none;
+   border-radius: 5px;
+   font-size: 16px;
+   cursor: pointer;
+   transition: transform 0.2s;
+}
+
+.buy-button {
+   background-color: brown;
+   color: white;
+}
+
+.cart-button {
+   background-color: #4CAF50;
+   color: white;
+}
+
+.buy-button:hover, .cart-button:hover {
+   transform: translateY(-2px);
+}

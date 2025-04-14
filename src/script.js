@@ -21,7 +21,7 @@ async function fetchBooks() {
 }
 
 function displayBooks(books) {
-    console.log("Datos recibidos:", books); // Debug 1
+    console.log("Datos recibidos:", books);
     
     const catalog = document.getElementById("book-catalog");
     if (!books || books.length === 0) {
@@ -30,16 +30,14 @@ function displayBooks(books) {
     }
 
     catalog.innerHTML = books.map(book => {
-        // Debug 2: Verifica el tipo de price
-        console.log(`Libro: ${book.title} - Precio (tipo ${typeof book.price}):`, book.price);
-        
         return `
         <div class="book-card">
-            <img src="${book.cover_image}" alt="${book.title}" class="book-cover">
+            <a href="detalle_libro.php?id=${book.id}">
+                <img src="${book.cover_image}" alt="${book.title}" class="book-cover">
+            </a>
             <h5>${book.title}</h5>
             <p>${book.author}</p>
             <h4 class="book-price">$${Number(book.price).toFixed(2)}</h4>
         </div>`;
     }).join('');
 }
-
