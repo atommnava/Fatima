@@ -65,6 +65,7 @@ if (!book) die("Libro no encontrado...");
         </div>
     </div>
 
+    <!-- Script.js -->
     <script src="script.js"></script>
 </body>
 </html>
