@@ -83,6 +83,5 @@ function comprarAhora(bookId) {
  * @param {number} bookId - ID del libro a agregar al carrito.
  */
 function agregarAlCarrito(bookId) {
-    // Lógica para agregar al carrito (actualmente solo muestra una alerta)
     alert(`Libro ID: ${bookId} agregado al carrito`);
 }
