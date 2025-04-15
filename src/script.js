@@ -2,6 +2,7 @@
  * @author Atom Alexander M. Nava
  * @brief Manejamos la lógica del cleinte para desplear el catálogo de libros.
  * Se ejecuta cuando el DOM está completamente cargado.
+ * @date
  */
 
 //Espera a que el DOM esté completamente cargado antes de ejecutarse el código.
@@ -66,4 +67,22 @@ function displayBooks(books) {
             <h4 class="book-price">$${Number(book.price).toFixed(2)}</h4>
         </div>`;
     }).join('');
+}
+
+/**
+     * Función para manejar la compra directa de un libro.
+     * @param {number} bookId - ID del libro a comprar.
+     */
+function comprarAhora(bookId) {
+    // Lógica para compra directa (actualmente solo muestra una alerta)
+    alert(`Iniciando compra del libro ID: ${bookId}`);
+}
+
+/**
+ * Función para agregar un libro al carrito de compras.
+ * @param {number} bookId - ID del libro a agregar al carrito.
+ */
+function agregarAlCarrito(bookId) {
+    // Lógica para agregar al carrito (actualmente solo muestra una alerta)
+    alert(`Libro ID: ${bookId} agregado al carrito`);
 }

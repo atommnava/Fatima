@@ -3,6 +3,7 @@
  * @author Atom Alexander M. Nava
  * @brief Script PHP que srive como base (API) para obtener todos los libros de la base de datos.
  * Devuelve los datos en formato JSON.
+ * @date 
  */
 
  // Configuración de cabeceras para permitir CORS y especificar el tipo de contenido
@@ -10,13 +11,15 @@
  header("Content-Type: application/json");
 
  // Configuración de la conexión a la base de datos
+ /*
  $host = "localhost";
  $user = "ict23amn";
  $password = "258927";
  $database = "ict23amn";
-
+*/
  // Crear conexión 
- $conn = new mysqli($host, $user, $password, $database);
+ //$conn = new mysqli($host, $user, $password, $database);
+ require_once 'config.php';
 
  // Validación
  if ($conn -> connect_error) die(json_encode(["error" => "Conexión fallida: ". $conn->connect_error]));
