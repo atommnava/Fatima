@@ -46,16 +46,16 @@ async function fetchBooks()
 function displayBooks(books) {
     console.log("Datos recibidos:", books);
     
-    const catalog = document.getElementById("book-catalog");
+    const catalogo = document.getElementById("book-catalog");
     
     // Verifica si hay libros para mostrar
     if (!books || books.length === 0) {
-        catalog.innerHTML = "<p class='error'>No se encontraron libros.</p>";
+        catalogo.innerHTML = "<p class='error'>No se encontraron libros.</p>";
         return;
     }
 
     // Genera el HTML para cada libro y lo une en un solo string
-    catalog.innerHTML = books.map(book => {
+    catalogo.innerHTML = books.map(book => {
         return `
         <div class="book-card">
             <a href="detalle_libro.php?id=${book.id}">
