@@ -11,9 +11,9 @@
 
  // Configuración de la conexión a la base de datos
  $host = "localhost";
- $user = "ict23amn";
- $password = "258927";
- $database = "ict23amn";
+ $user = "";
+ $password = "";
+ $database = "";
 
  // Crear conexión 
  $conn = new mysqli($host, $user, $password, $database);
