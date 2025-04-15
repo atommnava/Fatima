@@ -10,15 +10,6 @@
  header("Access-Control-Allow-Origin: *");
  header("Content-Type: application/json");
 
- // Configuración de la conexión a la base de datos
- /*
- $host = "localhost";
- $user = "ict23amn";
- $password = "258927";
- $database = "ict23amn";
-*/
- // Crear conexión 
- //$conn = new mysqli($host, $user, $password, $database);
  require_once 'config.php';
 
  // Validación
