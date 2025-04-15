@@ -2,9 +2,9 @@
 header("Access-Control-Allow-Origin: *");
 
 $host = "localhost";
-$user = "ict23amn";
-$password = "258927";
-$database = "ict23amn";
+$user = "";
+$password = "";
+$database = "";
 
 $conn = new mysqli($host, $user, $password, $database);
 if ($conn->connect_error) {
