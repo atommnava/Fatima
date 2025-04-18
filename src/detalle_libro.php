@@ -40,6 +40,8 @@ if (!book) die("Libro no encontrado...");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> <?= htmlspecialchars($book['title']) ?> </title>
     <link rel="stylesheet" href="https://antares.dci.uia.mx/ict23amn/Fatima/src/style.css">
+    <!-- Favicon estándar -->
+    <link rel="icon" href="../images/logo.ico" type="image/x-icon">
 </head>
 <body style="background-color: #EEDDC2">
     
